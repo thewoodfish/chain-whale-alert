@@ -31,27 +31,27 @@ const TransactionCard = ({ transaction }: TransactionCardProps) => {
   };
 
   return (
-    <Card className="p-4 bg-card border-border hover:border-primary/50 transition-all duration-300 animate-in slide-in-from-top-2">
+    <Card className="p-5 bg-card border-border hover:shadow-md transition-all duration-300 animate-in slide-in-from-top-2">
       <div className="flex items-center justify-between gap-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-xs text-muted-foreground">From</span>
-            <code className="text-sm text-foreground font-mono">{formatAddress(transaction.from)}</code>
+            <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">From</span>
+            <code className="text-sm text-foreground font-mono bg-secondary px-2 py-0.5 rounded">{formatAddress(transaction.from)}</code>
           </div>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <span>{formatTime(transaction.timestamp)}</span>
+            <span className="font-medium">{formatTime(transaction.timestamp)}</span>
             <span>•</span>
-            <code className="font-mono">{formatAddress(transaction.hash)}</code>
+            <code className="font-mono bg-secondary px-2 py-0.5 rounded">{formatAddress(transaction.hash)}</code>
           </div>
         </div>
         
-        <ArrowRight className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+        <ArrowRight className="w-5 h-5 text-muted-foreground/50 flex-shrink-0" />
         
         <div className="text-right flex-shrink-0">
           <div className="text-2xl font-bold text-primary font-mono">
             {formatAmount(transaction.amount)}
           </div>
-          <div className="text-xs text-muted-foreground">ETH</div>
+          <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide">DOT</div>
         </div>
       </div>
     </Card>

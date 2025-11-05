@@ -23,8 +23,8 @@ const ThresholdConfig = ({ onThresholdChange, currentThreshold }: ThresholdConfi
   return (
     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 items-end">
       <div className="flex-1 w-full">
-        <Label htmlFor="threshold" className="text-sm text-muted-foreground mb-2 block">
-          Alert Threshold (ETH)
+        <Label htmlFor="threshold" className="text-sm font-medium text-foreground mb-2 block">
+          Alert Threshold (DOT)
         </Label>
         <Input
           id="threshold"
@@ -33,13 +33,13 @@ const ThresholdConfig = ({ onThresholdChange, currentThreshold }: ThresholdConfi
           min="0.1"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          className="bg-secondary border-border"
+          className="bg-background border-border"
           placeholder="Enter threshold amount..."
         />
       </div>
-      <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+      <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium">
         <Settings className="w-4 h-4 mr-2" />
-        Update
+        Update Threshold
       </Button>
     </form>
   );

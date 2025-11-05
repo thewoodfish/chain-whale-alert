@@ -25,7 +25,7 @@ const Index = () => {
         </header>
 
         {/* Threshold Configuration */}
-        <div className="mb-8 p-6 rounded-2xl bg-card border border-border shadow-lg">
+        <div className="mb-8 p-6 rounded-lg bg-card border border-border shadow-sm">
           <ThresholdConfig
             currentThreshold={threshold}
             onThresholdChange={setThreshold}
